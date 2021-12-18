@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chihiro</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="header-top">
+          <div class="logo">
+            <img src="./assets/logo.png" alt="" />
+          </div>
+          <div class="social-links">
+            <div class="social">
+              <a
+                target="__blank"
+                href="https://www.facebook.com/profile.php?id=100023989972311"
+                ><img src="./assets/facebook.png" alt=""
+              /></a>
+            </div>
+            <div class="social">
+              <a target="__blank" href="https://github.com/JoaoOliveira0605"
+                ><img src="./assets/instagram.png" alt=""
+              /></a>
+            </div>
+            <div class="social">
+              <a
+                target="__blank"
+                href="https://www.linkedin.com/in/jo%C3%A3o-vitor-oliveira-santos/"
+                ><img src="./assets/twitter.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="middle-content">
+          <div class="left-side">
+            <div class="about-film">
+              <h2>HAYAO MIYAZAKI</h2>
+              <h1>A VIAGEM<br />DE CHIHIRO</h1>
+              <p>
+                Chihiro chega a um mundo mágico dominado por<br />
+                uma bruxa. Aqueles que a desobedecem são<br />
+                transformados em animais.
+              </p>
+            </div>
+            <div class="buttons">
+              <button id="1">
+                <a href="https://www.netflix.com/br/title/60023642?source=35"
+                  >ASSISTIR AGORA</a
+                >
+              </button>
+              <button id="2">
+                <a href="#" onclick="toggle()">VEJA O TRAILER</a>
+              </button>
+            </div>
+            <div class="trailer">
+              <video
+                src="./assets/Spirited Away - Official Trailer.mp4"
+                controls="true"
+              ></video>
+              <img
+                class="close"
+                onclick="toggle()"
+                src="./assets/close.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="right-side">
+            <img class="ghost" src="./assets/ghost.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="./script.js"></script>
+  </body>
+</html>

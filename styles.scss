@@ -1,0 +1,721 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  background: rgb(98, 142, 117);
+  background: linear-gradient(
+    148deg,
+    rgba(98, 142, 117, 1) 0%,
+    rgba(67, 112, 103, 1) 37%,
+    rgba(26, 72, 85, 1) 100%
+  );
+
+  .header-content {
+    .header-top {
+      align-items: center;
+      display: flex;
+
+      .logo {
+        margin-top: 2.5rem;
+        margin-left: 10.4rem;
+        margin-right: 73.4rem;
+      }
+
+      .social-links {
+        margin-top: 2.5rem;
+        display: flex;
+        .social {
+          a {
+            transition: 0.4s;
+          }
+          a:hover {
+            transition: 0.4s;
+            filter: invert(14%) sepia(31%) saturate(4753%) hue-rotate(171deg)
+              brightness(90%) contrast(80%);
+          }
+          padding-right: 2.4rem;
+        }
+      }
+    }
+
+    .middle-content {
+      display: flex;
+      position: relative;
+
+      .left-side {
+        position: relative;
+
+        margin-top: 5.6rem;
+        margin-left: 10.3rem;
+
+        .trailer {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+
+          transform: translate(-50%, -50%);
+          z-index: 555555;
+          background: rgba(0, 0, 0, 0);
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0%;
+          visibility: hidden;
+
+          transition: 0.4s ease-out;
+
+          video {
+            position: relative;
+          }
+          .close {
+            position: absolute;
+            height: 2rem;
+            left: 87rem;
+            top: 0;
+            cursor: pointer;
+          }
+        }
+
+        .trailer.active {
+          opacity: 1;
+          visibility: visible;
+          transition: 0.4s ease-in;
+        }
+        .about-film {
+          h2 {
+            font-size: 20px;
+            font-weight: 700;
+          }
+
+          h1 {
+            font-size: 68px;
+            font-weight: 900;
+            line-height: 72px;
+            margin-top: 0.875rem;
+            font-style: normal;
+          }
+
+          p {
+            margin-top: 1.563rem;
+            font-size: 1rem;
+          }
+          color: white;
+        }
+
+        .buttons {
+          margin-top: 2.875rem;
+          margin-right: 2rem;
+          button {
+            transition: 0.6s;
+            margin-right: 1rem;
+            width: 14.063rem;
+            height: 2.813rem;
+            border-radius: 5px 0px 5px;
+            background: #658e76;
+            a {
+              color: white;
+            }
+          }
+
+          button:hover {
+            width: 15.063rem;
+            height: 3rem;
+            transition: 0.4s;
+            background: #658e7671;
+          }
+        }
+      }
+
+      .right-side {
+        margin-left: 15.313rem;
+
+        .ghost {
+          animation: myAnim 4s ease 0s infinite alternate-reverse both;
+        }
+      }
+    }
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(-45px);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-24px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12px);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  header {
+    height: 100vh;
+    width: 100%;
+    background: rgb(98, 142, 117);
+    background: linear-gradient(
+      148deg,
+      rgba(98, 142, 117, 1) 0%,
+      rgba(67, 112, 103, 1) 37%,
+      rgba(26, 72, 85, 1) 100%
+    );
+
+    .header-content {
+      .header-top {
+        align-items: center;
+        display: flex;
+
+        .logo {
+          margin-top: 1.5rem;
+          margin-left: 0.6rem;
+          margin-right: 6rem;
+        }
+
+        .social-links {
+          margin-top: 2.5rem;
+          display: flex;
+          .social {
+            a {
+              transition: 0.4s;
+            }
+            a:hover {
+              transition: 0.4s;
+              filter: invert(14%) sepia(31%) saturate(4753%) hue-rotate(171deg)
+                brightness(90%) contrast(80%);
+            }
+            padding-right: 0.5rem;
+          }
+        }
+      }
+
+      .middle-content {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+
+        .left-side {
+          position: relative;
+
+          margin-top: 1.6rem;
+          margin-left: 1.3rem;
+
+          .trailer {
+            opacity: 0%;
+            visibility: hidden;
+
+            .close {
+              display: none;
+            }
+          }
+
+          .trailer.active {
+            opacity: 0;
+            display: none;
+          }
+          .about-film {
+            h2 {
+              font-size: 15px;
+              font-weight: 700;
+            }
+
+            h1 {
+              font-size: 1.5rem;
+              font-weight: 900;
+              line-height: 1.4;
+            }
+
+            p {
+              margin-top: 1rem;
+              font-size: 1.1rem;
+            }
+            color: white;
+          }
+
+          .buttons {
+            margin-top: 2.875rem;
+            margin-right: 2rem;
+            button {
+              transition: 0.6s;
+              margin-right: 1rem;
+              width: 14.063rem;
+              height: 2.813rem;
+              border-radius: 5px 0px 5px;
+              display: none;
+              background: #658e76;
+              a {
+                color: white;
+              }
+            }
+
+            button:hover {
+              width: 15.063rem;
+              height: 3rem;
+              transition: 0.4s;
+              background: #658e7671;
+            }
+          }
+        }
+
+        .right-side {
+          display: flex;
+          margin: 0;
+          position: relative;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          .ghost {
+            position: absolute;
+            height: 10rem;
+            top: -50px;
+            img {
+              animation: myAnim 4s ease 0s infinite alternate-reverse both;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  header {
+    height: 100vh;
+    width: 100%;
+    background: rgb(98, 142, 117);
+    background: linear-gradient(
+      148deg,
+      rgba(98, 142, 117, 1) 0%,
+      rgba(67, 112, 103, 1) 37%,
+      rgba(26, 72, 85, 1) 100%
+    );
+
+    .header-content {
+      .header-top {
+        align-items: center;
+        display: flex;
+
+        .logo {
+          margin-top: 1.5rem;
+          margin-left: 0.6rem;
+          margin-right: 6rem;
+        }
+
+        .social-links {
+          margin-top: 2.5rem;
+          display: flex;
+          .social {
+            a {
+              transition: 0.4s;
+            }
+            a:hover {
+              transition: 0.4s;
+              filter: invert(14%) sepia(31%) saturate(4753%) hue-rotate(171deg)
+                brightness(90%) contrast(80%);
+            }
+            padding-right: 1.5rem;
+          }
+        }
+      }
+
+      .middle-content {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+
+        .left-side {
+          position: relative;
+
+          margin-top: 1.6rem;
+          margin-left: 1.3rem;
+
+          .trailer {
+            opacity: 0%;
+            visibility: hidden;
+
+            .close {
+              display: none;
+            }
+          }
+
+          .trailer.active {
+            opacity: 0;
+            display: none;
+          }
+          .about-film {
+            h2 {
+              font-size: 15px;
+              font-weight: 700;
+            }
+
+            h1 {
+              font-size: 1.5rem;
+              font-weight: 900;
+              line-height: 1.4;
+            }
+
+            p {
+              margin-top: 1rem;
+              font-size: 1.1rem;
+            }
+            color: white;
+          }
+
+          .buttons {
+            margin-top: 2.875rem;
+            margin-right: 2rem;
+            button {
+              transition: 0.6s;
+              margin-right: 1rem;
+              width: 14.063rem;
+              height: 2.813rem;
+              border-radius: 5px 0px 5px;
+              display: none;
+              background: #658e76;
+              a {
+                color: white;
+              }
+            }
+
+            button:hover {
+              width: 15.063rem;
+              height: 3rem;
+              transition: 0.4s;
+              background: #658e7671;
+            }
+          }
+        }
+
+        .right-side {
+          display: flex;
+          margin: 0;
+          position: relative;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          .ghost {
+            position: absolute;
+            height: 18rem;
+            top: -50px;
+            img {
+              animation: myAnim 4s ease 0s infinite alternate-reverse both;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  header {
+    height: 100vh;
+    width: 100%;
+    background: rgb(98, 142, 117);
+    background: linear-gradient(
+      148deg,
+      rgba(98, 142, 117, 1) 0%,
+      rgba(67, 112, 103, 1) 37%,
+      rgba(26, 72, 85, 1) 100%
+    );
+
+    .header-content {
+      .header-top {
+        align-items: center;
+        display: flex;
+
+        .logo {
+          margin-top: 1.5rem;
+          margin-left: 2.6rem;
+          margin-right: 30rem;
+        }
+
+        .social-links {
+          margin-top: 2.5rem;
+          display: flex;
+          .social {
+            a {
+              transition: 0.4s;
+            }
+            a:hover {
+              transition: 0.4s;
+              filter: invert(14%) sepia(31%) saturate(4753%) hue-rotate(171deg)
+                brightness(90%) contrast(80%);
+            }
+            padding-right: 1.5rem;
+          }
+        }
+      }
+
+      .middle-content {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+
+        .left-side {
+          position: relative;
+
+          margin-top: 1.6rem;
+          margin-left: 5.3rem;
+
+          .trailer {
+            opacity: 0%;
+            visibility: hidden;
+
+            .close {
+              display: none;
+            }
+          }
+
+          .trailer.active {
+            opacity: 0;
+            display: none;
+          }
+          .about-film {
+            h2 {
+              font-size: 25px;
+              font-weight: 700;
+            }
+
+            h1 {
+              font-size: 2.5rem;
+              font-weight: 900;
+              line-height: 1.4;
+            }
+
+            p {
+              margin-top: 1rem;
+              font-size: 1.5rem;
+            }
+            color: white;
+          }
+
+          .buttons {
+            margin-top: 2.875rem;
+            margin-right: 2rem;
+            button {
+              transition: 0.6s;
+              margin-right: 1rem;
+              width: 14.063rem;
+              height: 2.813rem;
+              border-radius: 5px 0px 5px;
+              display: none;
+              background: #658e76;
+              a {
+                color: white;
+              }
+            }
+
+            button:hover {
+              width: 15.063rem;
+              height: 3rem;
+              transition: 0.4s;
+              background: #658e7671;
+            }
+          }
+        }
+
+        .right-side {
+          display: flex;
+          margin: 0;
+          position: relative;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          .ghost {
+            position: absolute;
+            height: 25rem;
+            top: -20px;
+            img {
+              animation: myAnim 4s ease 0s infinite alternate-reverse both;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  header {
+    height: 100vh;
+    width: 100%;
+    background: rgb(98, 142, 117);
+    background: linear-gradient(
+      148deg,
+      rgba(98, 142, 117, 1) 0%,
+      rgba(67, 112, 103, 1) 37%,
+      rgba(26, 72, 85, 1) 100%
+    );
+
+    .header-content {
+      .header-top {
+        align-items: center;
+        display: flex;
+
+        .logo {
+          margin-top: 2.5rem;
+          margin-left: 10.4rem;
+          margin-right: 73.4rem;
+        }
+
+        .social-links {
+          margin-top: 2.5rem;
+          display: flex;
+          .social {
+            a {
+              transition: 0.4s;
+            }
+            a:hover {
+              transition: 0.4s;
+              filter: invert(14%) sepia(31%) saturate(4753%) hue-rotate(171deg)
+                brightness(90%) contrast(80%);
+            }
+            padding-right: 2.4rem;
+          }
+        }
+      }
+
+      .middle-content {
+        display: flex;
+        position: relative;
+
+        .left-side {
+          position: relative;
+
+          margin-top: 5.6rem;
+          margin-left: 10.3rem;
+
+          .trailer {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+            z-index: 555555;
+            background: rgba(0, 0, 0, 0);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0%;
+            visibility: hidden;
+
+            transition: 0.4s ease-out;
+
+            video {
+              position: relative;
+            }
+            .close {
+              position: absolute;
+              height: 2rem;
+              left: 87rem;
+              top: 0;
+              cursor: pointer;
+            }
+          }
+
+          .trailer.active {
+            opacity: 1;
+            visibility: visible;
+            transition: 0.4s ease-in;
+          }
+          .about-film {
+            h2 {
+              font-size: 20px;
+              font-weight: 700;
+            }
+
+            h1 {
+              font-size: 68px;
+              font-weight: 900;
+              line-height: 72px;
+              margin-top: 0.875rem;
+              font-style: normal;
+            }
+
+            p {
+              margin-top: 1.563rem;
+              font-size: 1rem;
+            }
+            color: white;
+          }
+
+          .buttons {
+            margin-top: 2.875rem;
+            margin-right: 2rem;
+            button {
+              transition: 0.6s;
+              margin-right: 1rem;
+              width: 14.063rem;
+              height: 2.813rem;
+              border-radius: 5px 0px 5px;
+              background: #658e76;
+              a {
+                color: white;
+              }
+            }
+
+            button:hover {
+              width: 15.063rem;
+              height: 3rem;
+              transition: 0.4s;
+              background: #658e7671;
+            }
+          }
+        }
+
+        .right-side {
+          margin-left: 15.313rem;
+
+          .ghost {
+            animation: myAnim 4s ease 0s infinite alternate-reverse both;
+          }
+        }
+      }
+    }
+  }
+}
